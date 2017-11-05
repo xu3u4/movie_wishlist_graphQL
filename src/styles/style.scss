@@ -1,0 +1,144 @@
+$searchbar_width: 200px;
+$searchbar_height: 35px;
+$searchbar_radius: 5px;
+$theme_blue: #119da4;
+$theme_brown: #573d1c;
+$theme_orange: #fe4e00;
+$theme_yellow: #ff9505;
+$theme_grey: #494947;
+
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline:none;
+  cursor: pointer;
+  border: 0px;
+}
+
+input {
+  &:focus {
+    outline:none;
+  }
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: $theme_grey;
+
+  .search_bar {
+    display: flex;
+    height: $searchbar_height;
+    max-width: 100%;
+    margin: (60px - $searchbar_height)/2;
+
+    .search_input {
+      border: 0px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: $searchbar_radius 0px 0px $searchbar_radius;
+      padding: 0 8px;
+      line-height: $searchbar_height;
+      width: $searchbar_width;
+      font-size: 1rem;
+      color: $theme_yellow;
+    }
+
+    .search_bar_icon {
+      height: $searchbar_height;
+      color: $theme_orange;
+    }
+
+    .search_clear {
+      background-color: rgba(255, 255, 255, 0.5);
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .search_clear_button {
+      width: 18px;
+    }
+
+    .hide_search_clear {
+      visibility: hidden;
+    }
+
+    .search_button {
+      border-radius: 0px $searchbar_radius $searchbar_radius 0px;
+      background-color: #ffffff;
+      &:hover {
+        color: $theme_yellow;
+      }
+    }
+  }
+}
+
+.wishlist {
+  padding: 20px 50px;
+  font-family: 'Catamaran', sans-serif;
+  display: grid;
+
+  @media only screen and (max-width: 420px) {
+    padding: 20px;
+  }
+
+  @media only screen and (min-width: 420px) {
+    grid-template-columns: 1fr 1fr
+  }
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }  
+
+  .item_box {
+    color: #ffffff;
+    min-width: 16.66%;
+    max-width: 100%;
+    margin: 10px;
+    padding: 15px;
+
+    .item_title {
+      font-size: 23px;
+      font-family: 'Roboto Slab', serif;
+
+      .item_year {
+        font-size: 16px;
+      }
+    }
+
+    .rating_star {
+      position: relative;
+      top: 4px;
+    }
+
+    .item_tag {
+      color: $theme_blue;
+      font-weight: 200;
+      font-style: italic;
+    }
+  }
+
+  .level1_box {
+    background-color: $theme_yellow;
+  }
+
+  .level2_box {
+    background-color: $theme_orange;
+  }
+
+  .level3_box {
+    background-color: $theme_brown;
+  }
+
+}
