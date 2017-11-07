@@ -9,7 +9,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://0.0.0.0:3000',
-    './src/index.js'
+    './src/js/index.js'
   ],
   output: {
     filename: 'movie.bundle.js',
@@ -69,7 +69,7 @@ module.exports = {
     contentBase: path.join(__dirname, "dist")
   },
   resolve: {
-    modules: [ 'src', 'node_modules' ]
+    modules: [ 'src/js', 'node_modules' ]
   },
   plugins: [
     new HtmlWebpackPlugin({
