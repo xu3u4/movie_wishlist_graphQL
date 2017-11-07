@@ -27,6 +27,10 @@ input {
   }
 }
 
+hr {
+  border: 0;
+}
+
 .header {
   display: flex;
   height: 60px;
@@ -102,11 +106,13 @@ input {
   }  
 
   .item_box {
-    color: #ffffff;
+    color: $theme_grey;
     min-width: 16.66%;
     max-width: 100%;
     margin: 10px;
     padding: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
 
     .item_title {
       font-size: 23px;
@@ -128,6 +134,10 @@ input {
       font-style: italic;
     }
   }
+
+  .title_hr_style {
+    height: 5px;
+  } 
 
   .level1_box {
     background-color: $theme_yellow;
