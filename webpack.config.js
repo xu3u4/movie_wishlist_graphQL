@@ -54,7 +54,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {}  
+            options: {}
           }
         ]
       }
@@ -66,6 +66,7 @@ module.exports = {
     hot: true,
     host: 'localhost',
     port: 3000,
+    historyApiFallback: true,
     contentBase: path.join(__dirname, "dist")
   },
   resolve: {
