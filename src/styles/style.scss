@@ -89,66 +89,74 @@ hr {
   font-family: 'Catamaran', sans-serif;
   display: grid;
 
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 550px) {
     padding: 20px;
   }
 
-  @media only screen and (min-width: 420px) {
+  @media only screen and (min-width: 630px) {
     grid-template-columns: 1fr 1fr
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 850px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 1100px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  @media only screen and (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }  
 
   .item_box {
-    color: $theme_grey;
-    min-width: 16.66%;
-    max-width: 100%;
+    display: flex;
     margin: 10px;
-    padding: 15px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
+    height: 200px;
 
-    .item_title {
-      font-size: 23px;
-      font-family: 'Roboto Slab', serif;
+    .item_image img {
+      height: 100%;
+    }
 
-      .item_year {
-        font-size: 16px;
+    .item_details {
+      color: $theme_grey;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #dddddd;
+      border-left: 0;
+
+      .item_title {
+        font-size: 23px;
+        font-family: 'Roboto Slab', serif;
+
+        .item_year {
+          font-size: 16px;
+        }
+      }
+
+      .rating_star {
+        position: relative;
+        top: 4px;
+      }
+
+      .item_tag {
+        color: $theme_blue;
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      .title_hr_style {
+        height: 5px;
+      }
+
+      .level1_box {
+        background-color: $theme_yellow;
+      }
+
+      .level2_box {
+        background-color: $theme_orange;
+      }
+
+      .level3_box {
+        background-color: $theme_brown;
       }
     }
-
-    .rating_star {
-      position: relative;
-      top: 4px;
-    }
-
-    .item_tag {
-      color: $theme_blue;
-      font-weight: 200;
-      font-style: italic;
-    }
   }
-
-  .title_hr_style {
-    height: 5px;
-  } 
-
-  .level1_box {
-    background-color: $theme_yellow;
-  }
-
-  .level2_box {
-    background-color: $theme_orange;
-  }
-
-  .level3_box {
-    background-color: $theme_brown;
-  }
-
 }
